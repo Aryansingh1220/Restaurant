@@ -1,22 +1,35 @@
+
 import React from 'react';
 
 import { SubHeading } from '../../components';
 import { images } from '../../constants';
 import './Header.css';
 
-const Header = () => (
-  <div className="app__header app__wrapper section__padding" id="home">
-    <div className="app__wrapper_info">
-      <SubHeading title="Chase the new flavour" />
-      <h1 className="app__header-h1">The Key To Fine Dining</h1>
-      <p className="p__opensans" style={{ margin: '2rem 0' }}>Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus </p>
-      <button type="button" className="custom__button">Explore Menu</button>
-    </div>
+const Header = () => {
+  const scrollToMenu = () => {
+    document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
+  };
 
-    <div className="app__wrapper_img">
-      <img src={images.welcome} alt="header_img" />
+  return (
+    <div className="app__header app__wrapper section__padding" id="home">
+      <div className="app__wrapper_info">
+        <SubHeading title="Discover a New Taste Adventure" />
+        <h1 className="app__header-h1">The Key To Fine Dining</h1>
+        <p className="p__opensans" style={{ margin: '2rem 0' }}>
+          Indulge in culinary delights crafted with passion and precision. From
+          traditional spices to contemporary flavors, our menu promises a
+          memorable journey for your taste buds.
+        </p>
+        <button type="button" className="custom__button" onClick={scrollToMenu}>
+          Explore Menu
+        </button>
+      </div>
+
+      <div className="app__wrapper_img">
+        <img src={images.welcome} alt="header_img" />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Header;

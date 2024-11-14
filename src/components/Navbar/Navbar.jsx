@@ -6,6 +6,8 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
+  const [showBookingModal, setShowBookingModal] = React.useState(false);
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -21,7 +23,21 @@ const Navbar = () => {
       <div className="app__navbar-login">
         <a href="#login" className="p__opensans">Log In / Registration</a>
         <div />
-        <a href="/" className="p__opensans">Book Table</a>
+        {/* Book Table as a styled button */}
+        <button
+          type="button"
+          className="p__opensans app__navbar-link"
+          onClick={() => setShowBookingModal(true)}
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            cursor: 'pointer',
+            color: '#fff', // Set the text color to white
+          }}
+        >
+          Book Table
+        </button>
       </div>
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
@@ -38,6 +54,21 @@ const Navbar = () => {
           </div>
         )}
       </div>
+
+      {/* Booking Modal */}
+      {showBookingModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>Table Booking</h2>
+            <p>Select your table and time</p>
+            <p>Table 1 - $50</p>
+            <p>Table 2 - $75</p>
+            <p>Table 3 - $100</p>
+            {/* Close button */}
+            <button type="button" onClick={() => setShowBookingModal(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
