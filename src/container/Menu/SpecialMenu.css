@@ -52,6 +52,30 @@
     width: 100%;
 }
 
+/* Style for Cart Section */
+.cart-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cart-section h2 {
+    color: var(--color-white);
+    font-size: 36px;
+    margin-bottom: 1rem;
+}
+
+.cart-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-section ul li {
+    color: var(--color-white);
+    font-size: 18px;
+    margin: 0.5rem 0;
+}
+
+/* Responsive Styling */
 @media screen and (min-width: 2000px) {
     .app__specialMenu-menu_img {
         width: 650px;

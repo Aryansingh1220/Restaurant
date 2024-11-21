@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { SubHeading } from '../../components';
 
 const FindUs = () => {
   const openMap = () => {
-    window.open('https://www.google.com/maps/place/Jalandhar,+Punjab,+India', '_blank');
+    window.open('https://www.google.com/maps/place/Shakti+Chowk,+Bijnor,+Uttar+Pradesh,+India', '_blank');
   };
 
   return (
@@ -15,7 +14,7 @@ const FindUs = () => {
           <SubHeading title="Contact" />
           <h1 className="findus__header">Find Us</h1>
           <div className="findus__content">
-            <p>We are located in the heart of Jalandhar, Punjab, India.</p>
+            <p>We are located at Shakti Chowk, Bijnor, Uttar Pradesh, India.</p>
             <p className="findus__hours-header">Opening Hours</p>
             <p>Mon - Fri: 10:00 am - 02:00 am</p>
             <p>Sat - Sun: 10:00 am - 03:00 am</p>
